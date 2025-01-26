@@ -10,5 +10,4 @@ published_settings:
     label: Relay on # human readable name
     description: Switch the power supply to the relay on/off.
     type: boolean
-    default: null
     display: true

@@ -5,7 +5,7 @@ from time import sleep
 
 from pioreactor.pubsub import publish
 
-from .relay import Relay
+from . import Relay
 
 
 def test_relay_init_start_on():

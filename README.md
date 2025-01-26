@@ -8,11 +8,11 @@ This relay plugin allows the user to turn on or off any additional hardware piec
 Install from the Pioreactor plugins web interface or the command line:
 
 ```
-pio install-plugin pioreactor-relay-plugin    # to install directly on the Pioreactor
+pio plugins install pioreactor-relay-plugin    # to install directly on the Pioreactor
 
 # OR, on the leader's command line:
 
-pios install-plugin pioreactor-relay-plugin   # to install on all Pioreactors in a cluster
+pios plugins install pioreactor-relay-plugin   # to install on all Pioreactors in a cluster
 ```
 
 Or install through the web interface (_Plugins_ tab). This will install the plugin on all Pioreactors within the cluster.
