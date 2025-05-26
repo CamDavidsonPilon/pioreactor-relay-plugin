@@ -30,7 +30,7 @@ class Relay(BackgroundJobWithDodgingContrib):
         self.pwm_pin = PWM_TO_PIN[config.get("PWM_reverse", "relay")]
 
         self.pwm = PWM(
-            self.pwm_pin, hz=16, unit=unit, experiment=experiment, pubsub_client=self.pub_client
+            self.pwm_pin, hz=16, unit=unit, experiment=experiment, pub_client=self.pub_client
         )  # since we also go 100% high or 0% low, we don't need hz, but some systems don't allow a very low hz (like hz=1).
         self.pwm.lock()
 

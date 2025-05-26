@@ -7,7 +7,7 @@ from setuptools import setup
 
 setup(
     name="pioreactor-relay-plugin",
-    version="0.6.0",
+    version="0.7.0",
     license="MIT",
     description="Turn the PWM channels into a simple on/off relay for additional hardware.",
     long_description=open("README.md").read(),
@@ -18,4 +18,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     entry_points={"pioreactor.plugins": "pioreactor_relay_plugin = pioreactor_relay_plugin"},
+    install_requires=[
+        "pioreactor>=25.5.22",
+    ],
 )
