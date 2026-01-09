@@ -18,7 +18,4 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     entry_points={"pioreactor.plugins": "pioreactor_relay_plugin = pioreactor_relay_plugin"},
-    install_requires=[
-        "pioreactor>=25.5.22",
-    ],
 )
