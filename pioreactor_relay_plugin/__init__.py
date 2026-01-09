@@ -5,7 +5,7 @@ import click
 from pioreactor.background_jobs.base import BackgroundJobWithDodgingContrib
 from pioreactor.cli.run import run
 from pioreactor.config import config
-from pioreactor.hardware import PWM_TO_PIN
+from pioreactor.hardware import get_pwm_to_pin_map
 from pioreactor.utils.pwm import PWM
 from pioreactor.whoami import get_assigned_experiment_name
 from pioreactor.whoami import get_unit_name
@@ -27,6 +27,7 @@ class Relay(BackgroundJobWithDodgingContrib):
             self.duty_cycle = 0.0
             self.is_relay_on = False
 
+        PWM_TO_PIN = get_pwm_to_pin_map()
         self.pwm_pin = PWM_TO_PIN[config.get("PWM_reverse", "relay")]
 
         self.pwm = PWM(
